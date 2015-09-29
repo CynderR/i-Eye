@@ -11,9 +11,14 @@
 (function () {
     // the css we are going to inject
   var iEye = {
+    /* --------------------
+    //    Custom config
+    // -------------------- */
 
+    /*/ Currently set to ctrl+q to trigger an invert */
     keycodes: [81],
 
+    /* Sites to auto invert */
     autoChange: [
       "github.com",
       "www.google.com",
@@ -34,13 +39,13 @@
       "githowto.com",
       "www.thesaurus.com"
     ],
-
+    /* Auto invert exceptions */
     exclude: {
         "www.google.ca": ["/_/chrome/newtab"]
     },
+    /* unique css ID */
     uniqueStyle: "i-eye-style",
-
-
+    /*-------- END Config ----------*/
 
     css: " html {-webkit-filter: invert(100%);}" +
       " body{background-color: black;} " +
@@ -55,7 +60,6 @@
     host: window.location.hostname,
     path: window.location.pathname,
     head: document.getElementsByTagName('head')[0],
-
 
     invertColor: function () {
       var style = document.getElementById(this.uniqueStyle);
@@ -77,7 +81,7 @@
         if (this.keycodes.indexOf(e.keyCode) != -1 && e.ctrlKey) {
           e.cancelBubble = true;
           e.stopImmediatePropagation();
-
+          // Trigger inverting or uninverting
           this.invertColor();
         }
         return false;
@@ -89,6 +93,7 @@
           // If host matchs, check path
           for (var excludeItem in this.exclude[this.host]) {
             if (this.path == this.exclude[this.host][excludeItem]) {
+              // Dont invert this page
               return;
             }
           }
