@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Invert Colors2 (Chrome)
+// @name         iEye! (Chrome)
 // @namespace    http://themoviehacker.com/
-// @version      0.1
+// @version      0.2
 // @description  Invert any page color by pressing ctrl+q, auto invert any page by adding domain in the autoChange array
 // @author       Jason de Belle
 // @match        *://*/*
