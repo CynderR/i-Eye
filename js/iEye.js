@@ -5,6 +5,7 @@
 // @description  Invert any page color by pressing ctrl+q, auto invert any page by adding domain in the autoChange array
 // @author       Jason de Belle
 // @match        *://*/*
+// @run-at       document-start
 // @grant        none
 // ==/UserScript==
 
