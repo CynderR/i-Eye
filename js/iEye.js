@@ -49,7 +49,7 @@
     /*-------- END Config ----------*/
 
     css: " html {-webkit-filter: invert(100%);}" +
-      " body{background-color: black;} " +
+      " body{background-color: black!important;} " +
             " img {-webkit-filter: invert(100%);}" +
             " object {-webkit-filter: invert(100%);}" +
             " video {-webkit-filter: invert(100%);}" +
